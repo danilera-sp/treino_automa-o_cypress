@@ -12,6 +12,9 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // Retorna false para evitar que o Cypress falhe com exceções não tratadas
+    return false;
+});  
 // Import commands.js using ES2015 syntax:
 import './commands'

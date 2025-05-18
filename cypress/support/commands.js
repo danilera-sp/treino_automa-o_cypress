@@ -11,7 +11,10 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-//
+Cypress.Commands.add('saiDoSistema', () =>{
+    cy.get(':nth-child(7) > .header-icon > .fal').click()
+    cy.get('.dropdown-menu > .fw-500').click()
+})
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
